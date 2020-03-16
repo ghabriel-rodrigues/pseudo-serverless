@@ -1,3 +1,5 @@
+org: ghabrielrodrigues
+app: pseudo-serverless
 frameworkVersion: ">= 1.30.0"
 
 service: pseudo-serverless
@@ -33,7 +35,7 @@ functions:
   saveWorlds:
     handler: worlds/functions/saveWorlds.main
     events:
-      - schedule: cron(* */1 * * *)
+      - schedule: cron(0 12 * * ? *)
 
 plugins:
 - serverless-offline
